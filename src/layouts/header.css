@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+.tds-site-logo-link{
+    width: 180px;
+    margin-top: -10px;
+}
+
+.tesla-holder{
+    margin-top: 0.5rem;
+    height: 2rem;
+    padding: 6px;
+    padding-left: 17px;
+    padding-right: 17px;
+    border-radius: 12px;
+   
+}
+
+.tesla-holder:hover{
+    display: block;
+    background-color: rgb(205, 211, 219);
+}
+
+@keyframes slideOut {
+    from {
+      /* -webkit-transform: translate3d(-100%, 0, 0) skewX(30deg); */
+      transform: translate3d(-100%, 0, 0) skewX(30deg);
+      opacity: 0;
+    }
+  
+    60% {
+      /* -webkit-transform: skewX(-20deg); */
+      transform: skewX(-20deg);
+      opacity: 1;
+    }
+  
+    80% {
+      /* -webkit-transform: skewX(5deg); */
+      transform: skewX(5deg);
+    }
+  
+    to {
+      /* -webkit-transform: translate3d(0, 0, 0); */
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideIn{
+    from{
+        /* transform: translateX(0px); */
+        transform: translate3d(0px, 0px, 0px);
+        opacity: .8;
+    }
+    to{
+        /* transform: translateX(-60vw); */
+        transform: translate3d(-100px, 0px, 0px);
+        opacity: .0;
+    }
+}
+
+
+/* .animate__slideOut:hover {
+animation: slideOut .33s ease .1s;
+} */
+
+.tesla-middle-button{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.tds-site-nav-item-text{
+    position: relative;
+    top: -2px;
+}
+
+.tesla-container{
+    position: fixed;
+    top: 50px;
+    z-index: 100;
+}
+
+@media (max-width: 1024px){
+    .tesla-middle-button, .tds-site-nav-item-shop, .tds-site-nav-item-account{
+        display: none;
+    }
+    .tds-site-nav-item-menu {
+        position: relative;
+        /* left: -10px; */
+        top: 20px;
+        display: block;
+        background-color: #b8c5d2;
+    }
+    .tds-site-nav-item-menu:hover {
+        /* position: relative;
+        left: 30px; */
+        background-color:  #b8c5d2;
+    }
+    .tds-site-logo-link{
+        /* width: 180px; */
+        margin-right: -40px;
+        margin-top: -5px;
+    }
+}
+
+
+@media (max-width: 768px){
+    .tesla-middle-button, .tds-site-nav-item-shop, .tds-site-nav-item-account{
+        display: none;
+    }
+    /* .tds-site-nav-item-menu{
+
+    } */
+    .tds-site-nav-item-menu {
+        position: relative;
+        display: block;
+        left: -10px;
+
+        background-color: #b8c5d2;
+    }
+    .tds-site-nav-item-menu:hover {
+        /* position: relative;
+        left: 30px; */
+        background-color:  #b8c5d2;
+    }
+    .tds-site-logo-link{
+        /* width: 180px; */
+        margin-right: -40px;
+        margin-top: -5px;
+    }
+}
+
+@media (max-width: 501px){
+    
+    /* .tds-site-nav-item-menu{
+
+    } */
+    .tds-site-nav-item-menu {
+        position: relative;
+        display: flex;
+        left: -10px;
+        /* bottom: 140px; */
+        /* right: 500px; */
+        background-color: #b8c5d2;
+    }
+    .tds-site-nav-item-menu:hover {
+        /* position: relative;
+        left: 30px; */
+        background-color:  #b8c5d2;
+    }
+    .tds-site-logo-link{
+        /* width: 180px; */
+        margin-right: -40px;
+        margin-top: -5px;
+    }
+}

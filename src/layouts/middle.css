@@ -1,0 +1,21 @@
+.header__line{
+    position: absolute;
+    left: 50px;
+    z-index: 2000;
+    font-size: 40px;
+    text-align: center;
+    width: 90%;
+    /* background-color:red; */
+    margin-top: 100px;
+    letter-spacing: .19rem;
+}
+
+.header__body{
+    position: absolute;
+    left: 50px;
+    z-index: 2000;
+    /* font-size: 40px; */
+    text-align: center;
+    width: 90%;
+    margin-top: 160px;
+}

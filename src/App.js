@@ -1,24 +1,45 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import { Header, Homepage} from './layouts';
+// import footer from './layouts/'
+// import { Impact } from './components'
+import ErrorBoundary from './components/ErrorBoundary';
+
+
+
+const OurFallbackComponent = ({ error, componentStack, resetErrorBoundary }) => {
+  return (
+    <div>
+      <h1>An error occurred: {error.message}</h1>
+      <button onClick={resetErrorBoundary}>Try again</button>
+    </div>
+  );
+};
 
 function App() {
+  const [isMenu, setIsMenu] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <ErrorBoundary
+        FallbackComponent={OurFallbackComponent}
         >
-          Learn React
-        </a>
-      </header>
+          {/* <Impact/> */}
+          <Header isMenu={isMenu} setIsMenu={setIsMenu}/>
+          <div>
+            <Homepage/>
+            {/* <Middle/> */}
+          </div>
+            {/* <Footer/> */}
+          {/* <div>
+            <div className="mt-32">Signal</div>
+
+          </div> */}
+      </ErrorBoundary>
     </div>
+
+
   );
 }
 
